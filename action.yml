@@ -1,0 +1,23 @@
+name: Contribution Breakout
+description: Turn a GitHub contribution calendar into a Breakout animation for your profile README.
+branding:
+  icon: grid
+  color: green
+
+inputs:
+  github_user_name:
+    description: GitHub username whose contribution calendar to animate.
+    default: ${{ github.repository_owner }}
+  github_token:
+    description: Token for the GitHub GraphQL API. Defaults to the workflow token.
+    default: ${{ github.token }}
+  output_dir:
+    description: Directory for breakout-light.svg and breakout-dark.svg.
+    default: dist
+  playback_rate:
+    description: Animation speed relative to the simulation, greater than 0 and at most 2.
+    default: '0.5'
+
+runs:
+  using: node24
+  main: action-dist/action.js
