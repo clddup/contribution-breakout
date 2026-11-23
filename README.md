@@ -30,7 +30,7 @@ Turn your GitHub contribution calendar into a Breakout animation for your profil
        permissions:
          contents: write
        steps:
-         - uses: clddup/contribution-breakout@v1
+         - uses: clddup/contribution-breakout@v0.1.0
          - uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5.0.0
            with:
              target_branch: breakout-output
